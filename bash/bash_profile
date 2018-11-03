@@ -2,3 +2,13 @@
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+power() {
+    upower -i /org/freedesktop/UPower/devices/battery_BAT0| grep -E "state:|tim$
+}
+
+eval $(thefuck --alias)
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable chang$
+export PATH="$PATH:$HOME/.rvm/bin"
+
