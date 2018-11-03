@@ -1,3 +1,7 @@
+export NICE_HOSTNAME='hostname -f'
+export SHORT_HOSTNAME='hostname -s'
+
+test -f ~/.config/bash/colors && . $_
 
 [[ -s "$HOME/.profile" ]] && source "$HOME/.profile" # Load the default .profile
 
@@ -16,3 +20,4 @@ parse_git_branch() {
   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
 }
 
+export PS1=
